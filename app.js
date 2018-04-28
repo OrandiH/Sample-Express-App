@@ -5,7 +5,7 @@ var path = require('path');
 //Init app
 let app = express();
 //Set port for app 
-var port = 8000
+var port = 8000;
 
 //Set static path
 app.use(express.static(path.join(__dirname,'public'))) //This overides the / route

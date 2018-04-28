@@ -4,6 +4,8 @@ var path = require('path');
 
 //Init app
 let app = express();
+//Set port for 
+var port = process.env.PORT || 8000
 
 //Set static path
 app.use(express.static(path.join(__dirname,'public'))) //This overides the / route
@@ -19,5 +21,5 @@ app.get('/test', (req,res) => {
 
 //Start server
 app.listen(3000,() => {
-    console.log('Server started on port 3000...');
+    console.log('Server started on port ' + port);
 });

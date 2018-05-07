@@ -15,10 +15,6 @@ app.get('/', (req,res) => {
     res.sendFile('./index.html');
 })
 
-app.get('/test', (req,res) => {
-    res.render('test');
-})
-
 //Start server
 app.listen(port,() => {
     console.log('Server started on port ' + port);

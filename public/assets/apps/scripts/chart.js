@@ -35,6 +35,7 @@ ref.on('value', function (snapshot) {
         });
        sumConsumption = sumConsumption + dataFromDb[key]['data'].reading; 
     }
+    sumConsumption = Math.round(sumConsumption);
     //Calculate cost
     totalCost = sumConsumption * 15.00;
     //Set data for chart
